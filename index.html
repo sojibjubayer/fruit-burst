@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Burst</title>
+  <link rel="icon" href="./images/logo.png" type="images/gif/png">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    .lato {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-color': '#F85559',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="lato">
+  <header class="md:max-w-screen-xl mx-auto px-8 md:px-16 lg:px-20 py-3">
+    <nav class="navbar md:bg-primary-color h-[80px] rounded-full mt-5 flex-row-reverse md:flex-row">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div class="flex-none ml-24">
+            <button class="btn btn-square btn-ghost md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-300 rounded-box w-40">
+            <li><a>Home</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Shop</a></li>
+            <li><a>All Fruits</a></li>
+          </ul>
+        </div>
+        <div class="navbar-center hidden md:flex">
+          <ul class="menu menu-horizontal -ml-20 text-white text-lg hidden md:flex">
+            <li><a>Home</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Shop</a></li>
+            <li><a>All Fruits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ml-6 md:ml-0 max-[768px]:hidden max-[767px]:flex">
+        <img src="./images/logo.png" alt="">
+        <a class="btn btn-ghost normal-case text-3xl md:text-4xl   md:text-white">Fruit Burst</a>
+      </div>
+
+      <div class="navbar-end mr-4 relative hidden md:flex">
+        <input type="text" placeholder="search here" class="p-3  rounded-full text-sm">
+        <i class="fa-solid fa-magnifying-glass absolute mr-3"></i>
+      </div>
+    </nav>
+
+
+  </header>
+
+  <main class="md:max-w-screen-xl mx-auto px-8 md:px-16 lg:px-20">
+    <!-- banner section  -->
+    <section class="mt-10 relative">
+      <div class="hero min-h-[500px] bg-cover bg-no-repeat" style="background-image: url('./images/banner4.png');">
+        <div class=" hero-overlay  bg-opacity-50"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md space-y-4 -mt-36">
+            <h1 class="mb-5 text-6xl font-bold">Exotic tastes at your doorstep</h1>
+            <p class="text-lg">We supply highly quality organic products</p>
+            <button class="btn bg-primary-color border-none text-white">Shop Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- inherrit banner  -->
+      <div class="hidden md:flex justify-center mb-40">
+        <div class="flex justify-around text-center items-center w-4/5 h-[200px] bg-[#fff]   absolute -mt-24">
+          <div>
+            <img src="./images/fruit1.png" alt="">
+            <p>Strawberry</p>
+          </div>
+          <div>
+            <img src="./images/fruit2.png" alt="">
+            <p>Orange</p>
+          </div>
+          <div>
+            <img src="./images/fruit3.png" alt="">
+            <p>Mango</p>
+          </div>
+          <div>
+            <img src="./images/fruit4.png" alt="">
+            <p>Strawberry</p>
+          </div>
+          <div>
+            <img src="./images/fruit5.png" alt="">
+            <p>Currants</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEAL  SECTION START -->
+    <section class="mb-10">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="md:flex-1">
+          <h1 class="text-5xl">Deal of the day</h1>
+          <p class="text-base md:w-[550px]">Contrary to popular belief, is not simply random text. It has roots in a
+            piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div class="grid grid-flow-col gap-5 text-center auto-cols-max justify-end md:flex-1">
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:29;"></span>
+            </span>
+            days
+          </div>
+          <div>
+            <i class="fa-solid fa-ellipsis-vertical text-2xl mt-2"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:15;"></span>
+            </span>
+            hours
+          </div>
+          <div>
+            <i class="fa-solid fa-ellipsis-vertical text-2xl mt-2"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:25;"></span>
+            </span>
+            min
+          </div>
+          <div>
+            <i class="fa-solid fa-ellipsis-vertical text-2xl mt-2"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value:08;"></span>
+            </span>
+            sec
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEAL RATING SECTION  -->
+    <section class="mb-10">
+      <div class="m-10 flex lg:flex-row flex-col justify-center gap-10">
+        <!-- CARD -1  -->
+        <div class="card  bg-base-100 p-5">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit6.png" alt="user-1" class="rounded-xl w-[100px]" />
+          </figure>
+          <div class="card-body  items-center">
+            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
+            <p class="text-center text-sm">Apples</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+              <path
+                d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                fill="#F85559" />
+              <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                fill="#F85559" />
+              <path
+                d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                fill="#FBC0A8" />
+            </svg>
+            <!-- MODAL -->
+            <button class="btn text-base text-[#F85559]" onclick="my_modal_1.showModal()">Details</button>
+            <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <figure class="px-10 pt-10">
+                  <img src="./images/fruit6.png" alt="user-1" class="rounded-xl w-48" />
+                </figure>
+                <div class="card-body  items-center">
+                  <h4 class="text-center text-2xl font-bold">Apples</h4>
+                  <p class="text-center text-sm">Professional employees are there for you to pick the most amazing and
+                    fresh fruits.</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+                    <path
+                      d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                      fill="#F85559" />
+                    <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                      fill="#F85559" />
+                    <path
+                      d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                      fill="#FBC0A8" />
+                  </svg>
+                  <div class="modal-action">
+                    <button class="btn text-[#F85559] border-red-400">Close</button>
+                    <button class="p-3 rounded-md bg-[#F85559] border-none text-white">Buy Now</button>
+                  </div>
+              </form>
+            </dialog>
+
+          </div>
+        </div>
+
+        <!-- CARD 2  -->
+        <div class="card  bg-base-100 p-5 ">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit7.png" alt="user-1" class="rounded-xl w-[150px]" />
+          </figure>
+          <div class="card-body  items-center">
+            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
+            <p class="text-center text-sm">Orange</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+              <path
+                d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                fill="#F85559" />
+              <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                fill="#F85559" />
+              <path
+                d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                fill="#FBC0A8" />
+            </svg>
+            <!-- MODAL -->
+            <button class="btn text-base text-primary-color" onclick="my_modal_2.showModal()">Details</button>
+            <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <figure class="px-10 pt-10">
+                  <img src="./images/fruit7.png" alt="user-1" class="rounded-xl w-52" />
+                </figure>
+                <div class="card-body  items-center">
+                  <h4 class="text-center text-2xl font-bold">Orange</h4>
+                  <p class="text-center text-sm">Professional employees are there for you to pick the most amazing and
+                    fresh fruits.</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+                    <path
+                      d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                      fill="#F85559" />
+                    <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                      fill="#F85559" />
+                    <path
+                      d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                      fill="#FBC0A8" />
+                  </svg>
+                  <div class="modal-action">
+                    <button class="btn text-primary-color border-red-400">Close</button>
+                    <button class="p-3 rounded-md bg-primary-color border-none text-white">Buy Now</button>
+                  </div>
+              </form>
+            </dialog>
+
+
+          </div>
+        </div>
+        <!-- CARD 3  -->
+        <div class="card  bg-base-100 p-5 ">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit8.png" alt="user-1" class="rounded-xl w-[150px]" />
+          </figure>
+          <div class="card-body  items-center">
+            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
+            <p class="text-center text-sm">Red Dragon</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+              <path
+                d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                fill="#F85559" />
+              <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                fill="#F85559" />
+              <path
+                d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                fill="#FBC0A8" />
+            </svg>
+            <!-- MODAL -->
+            <button class="btn text-base text-primary-color" onclick="my_modal_3.showModal()">Details</button>
+            <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <figure class="px-10 pt-10">
+                  <img src="./images/fruit8.png" alt="user-1" class="rounded-xl w-52" />
+                </figure>
+                <div class="card-body  items-center">
+                  <h4 class="text-center text-2xl font-bold">Red Dragon</h4>
+                  <p class="text-center text-sm">Professional employees are there for you to pick the most amazing and
+                    fresh fruits.</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+                    <path
+                      d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                      fill="#F85559" />
+                    <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                      fill="#F85559" />
+                    <path
+                      d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                      fill="#FBC0A8" />
+                  </svg>
+                  <div class="modal-action">
+                    <button class="btn text-primary-color border-red-400">Close</button>
+                    <button class="p-3 rounded-md bg-primary-color border-none text-white">Buy Now</button>
+                  </div>
+              </form>
+            </dialog>
+
+
+          </div>
+        </div>
+        <!-- CARD-4  -->
+        <div class="card  bg-base-100 p-5">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit9.png" alt="user-1" class="rounded-xl w-[150px]" />
+          </figure>
+          <div class="card-body  items-center">
+            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
+            <p class="text-center text-sm">Banana</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+              <path
+                d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                fill="#F85559" />
+              <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                fill="#F85559" />
+              <path
+                d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                fill="#FBC0A8" />
+              <path
+                d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                fill="#FBC0A8" />
+            </svg>
+            <!-- MODAL -->
+            <button class="btn text-base text-[#F85559]" onclick="my_modal_4.showModal()">Details</button>
+            <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <figure class="px-10 pt-10">
+                  <img src="./images/fruit9.png" alt="user-1" class="rounded-xl w-52" />
+                </figure>
+                <div class="card-body  items-center">
+                  <h4 class="text-center text-2xl font-bold">Banana</h4>
+                  <p class="text-center text-sm">Professional employees are there for you to pick the most amazing and
+                    fresh fruits.</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" viewBox="0 0 160 24" fill="none">
+                    <path
+                      d="M45.8529 0L50.4018 7.00591L58.4705 9.16716L53.2131 15.6584L53.651 24L45.8529 21.0059L38.0549 24L38.4927 15.6584L33.2354 9.16716L41.3041 7.00591L45.8529 0Z"
+                      fill="#F85559" />
+                    <path d="M45.9038 0L50.4527 7.00591L58.5214 9.16716L53.264 15.6584L53.7018 24L45.9038 21.0059V0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                      fill="#F85559" />
+                    <path
+                      d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                      fill="#FBC0A8" />
+                    <path
+                      d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                      fill="#FBC0A8" />
+                  </svg>
+                  <div class="modal-action">
+                    <button class="btn text-[#F85559] border-red-400">Close</button>
+                    <button class="p-3 rounded-md bg-[#F85559] border-none text-white">Buy Now</button>
+                  </div>
+              </form>
+            </dialog>
+
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <button class="p-3 rounded-md bg-primary-color border-none text-white">Shop All</button>
+      </div>
+
+
+    </section>
+
+    <!-- MEET THE TEAM SECTION  -->
+    <section class="mb-10">
+      <div class="hero min-h-[500px] bg-cover bg-no-repeat" style="background-image: url('./images/banner1.png');">
+        <div class=" hero-overlay  bg-opacity-70"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md space-y-4">
+            <h1 class="text-4xl font-bold mt-20">Meet the team section</h1>
+            <p class="text-sm md:w-[500px]">Contrary to popular belief, is not simply random text. It has roots in a
+              piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+
+            <!-- MEET THE TEAM CARDS  -->
+            <div class="flex flex-col md:flex-row justify-center">
+              <!--  CARD 1 MEAT THE TEAM -->
+              <div class="card bg-transparent p-5">
+                <figure class="px-10 md:pt-24">
+                  <img src="./images/member1.png" alt="user-1" class="rounded-full w-[100px]" />
+                </figure>
+                <div class="card-body md:w-[200px] items-center text-white">
+                  <h4 class="text-center text-xl  ">Awlad Hossain</h4>
+                  <p class="text-center text-sm">Fruits Expert</p>
+                  <!-- SOCIAL ICONS  -->
+                  <div class="flex gap-3  ">
+                    <!-- fb icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4811)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M15.8018 10.5791L15.5604 12.6695C15.5504 12.7649 15.5057 12.8533 15.4348 12.9179C15.3639 12.9825 15.2718 13.0189 15.1759 13.02H12.9941L12.9832 19.2177C12.9839 19.2912 12.9557 19.362 12.9047 19.4148C12.8536 19.4676 12.7839 19.4982 12.7104 19.5H10.5C10.4632 19.5 10.4269 19.4926 10.393 19.4782C10.3592 19.4639 10.3287 19.4428 10.3032 19.4163C10.2777 19.3898 10.2578 19.3584 10.2448 19.3241C10.2318 19.2897 10.2258 19.2531 10.2273 19.2164V13.02H8.5909C8.5395 13.0195 8.48871 13.0088 8.44144 12.9887C8.39416 12.9685 8.35132 12.9392 8.31535 12.9025C8.27939 12.8658 8.25101 12.8223 8.23184 12.7746C8.21267 12.7269 8.20308 12.6759 8.20362 12.6245L8.19544 10.5341C8.19472 10.4825 8.20417 10.4313 8.22324 10.3834C8.24231 10.3355 8.27064 10.2918 8.3066 10.2548C8.34256 10.2178 8.38546 10.1883 8.43283 10.1679C8.48021 10.1475 8.53114 10.1366 8.58272 10.1359H10.2273V8.11773C10.2273 5.775 11.6182 4.5 13.6582 4.5H15.33C15.3817 4.50053 15.4328 4.51127 15.4803 4.53158C15.5278 4.5519 15.5709 4.5814 15.607 4.6184C15.6431 4.65539 15.6715 4.69915 15.6907 4.74716C15.7099 4.79517 15.7193 4.84649 15.7186 4.89818V6.65727C15.7193 6.70896 15.7099 6.76028 15.6907 6.8083C15.6715 6.85631 15.6431 6.90007 15.607 6.93706C15.5709 6.97405 15.5278 7.00355 15.4803 7.02387C15.4328 7.04419 15.3817 7.05492 15.33 7.05545H14.3045C13.1959 7.05545 12.9804 7.60091 12.9804 8.38909V10.1359H15.4173C15.4727 10.1366 15.5273 10.149 15.5776 10.1723C15.6279 10.1957 15.6726 10.2294 15.709 10.2712C15.7453 10.3131 15.7723 10.3622 15.7883 10.4152C15.8043 10.4683 15.8089 10.5241 15.8018 10.5791Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4811">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- twitter icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4828)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M19.7731 7.17948C19.1885 7.43484 18.57 7.60448 17.9368 7.68317C18.6043 7.28738 19.1032 6.66035 19.3389 5.92106C18.7142 6.29185 18.0307 6.55299 17.3179 6.69317C16.8811 6.22603 16.3138 5.90115 15.6899 5.76078C15.066 5.6204 14.4142 5.67103 13.8194 5.90608C13.2247 6.14113 12.7144 6.54972 12.355 7.0787C11.9956 7.60768 11.8037 8.23258 11.8042 8.87211C11.802 9.11622 11.8268 9.35982 11.8784 9.59843C10.6105 9.53615 9.36993 9.20709 8.23783 8.63274C7.10572 8.05839 6.10752 7.25167 5.30841 6.26527C4.89766 6.96697 4.77041 7.79905 4.95266 8.59143C5.13491 9.38382 5.6129 10.0767 6.28894 10.5284C5.78434 10.5148 5.29043 10.38 4.84894 10.1353V10.17C4.85036 10.9055 5.10494 11.6181 5.5699 12.188C6.03486 12.7579 6.68184 13.1504 7.40209 13.2995C7.12952 13.3711 6.84864 13.4061 6.56683 13.4037C6.36391 13.4074 6.16118 13.3894 5.96209 13.35C6.16844 13.9826 6.56571 14.5357 7.09926 14.9332C7.6328 15.3307 8.27641 15.5532 8.94157 15.57C7.81439 16.451 6.42484 16.9296 4.9942 16.9295C4.73929 16.9317 4.48452 16.9169 4.23157 16.8853C5.69031 17.8258 7.39066 18.3227 9.1263 18.3158C14.9921 18.3158 18.1989 13.4574 18.1989 9.24632C18.1989 9.1058 18.1989 8.97001 18.1879 8.83422C18.8124 8.38349 19.3496 7.82276 19.7731 7.17948Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4828">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- linked icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4834)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M9.3158 7.63737C9.31611 7.96166 9.22021 8.27875 9.04024 8.54851C8.86027 8.81828 8.60432 9.02859 8.30478 9.15284C8.00524 9.27708 7.67557 9.30967 7.3575 9.24648C7.03942 9.18329 6.74725 9.02716 6.51794 8.79786C6.28863 8.56855 6.13251 8.27637 6.06932 7.9583C6.00613 7.64023 6.03872 7.31056 6.16296 7.01102C6.28721 6.71148 6.49752 6.45552 6.76729 6.27556C7.03705 6.09559 7.35414 5.99969 7.67843 6C8.11256 6.00042 8.52879 6.17306 8.83576 6.48004C9.14274 6.78701 9.31538 7.20324 9.3158 7.63737Z"
+                          fill="white" />
+                        <path
+                          d="M8.54052 9.95844H6.81631C6.5922 9.95844 6.41052 10.1401 6.41052 10.3642V17.5942C6.41052 17.8183 6.5922 18 6.81631 18H8.54052C8.76463 18 8.94631 17.8183 8.94631 17.5942V10.3642C8.94631 10.1401 8.76463 9.95844 8.54052 9.95844Z"
+                          fill="white" />
+                        <path
+                          d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4739 17.8909C15.404 17.821 15.3647 17.7262 15.3647 17.6274V14.2358C15.3647 13.7289 15.5116 12.0253 14.0416 12.0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4408 17.9607 12.348 17.9992 12.2511 18H10.4605C10.4115 18.0002 10.363 17.9907 10.3177 17.9721C10.2724 17.9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4115 9.95842 10.4605 9.95842H12.2511C12.3007 9.95758 12.3501 9.96664 12.3962 9.98507C12.4423 10.0035 12.4843 10.0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4834">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!--  CARD 2 MEAT THE TEAM -->
+              <div class="card  bg-transparent p-5">
+                <figure class="px-10 md:pt-24">
+                  <img src="./images/member2.png" alt="user-1" class="rounded-full w-[100px]" />
+                </figure>
+                <div class="card-body md:w-[220px]  items-center text-white">
+                  <h4 class="text-center text-xl">Safia Chowdhury</h4>
+                  <p class="text-center text-sm">Fruits Expert</p>
+                  <div class="flex gap-3  ">
+                    <!-- fb icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4811)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M15.8018 10.5791L15.5604 12.6695C15.5504 12.7649 15.5057 12.8533 15.4348 12.9179C15.3639 12.9825 15.2718 13.0189 15.1759 13.02H12.9941L12.9832 19.2177C12.9839 19.2912 12.9557 19.362 12.9047 19.4148C12.8536 19.4676 12.7839 19.4982 12.7104 19.5H10.5C10.4632 19.5 10.4269 19.4926 10.393 19.4782C10.3592 19.4639 10.3287 19.4428 10.3032 19.4163C10.2777 19.3898 10.2578 19.3584 10.2448 19.3241C10.2318 19.2897 10.2258 19.2531 10.2273 19.2164V13.02H8.5909C8.5395 13.0195 8.48871 13.0088 8.44144 12.9887C8.39416 12.9685 8.35132 12.9392 8.31535 12.9025C8.27939 12.8658 8.25101 12.8223 8.23184 12.7746C8.21267 12.7269 8.20308 12.6759 8.20362 12.6245L8.19544 10.5341C8.19472 10.4825 8.20417 10.4313 8.22324 10.3834C8.24231 10.3355 8.27064 10.2918 8.3066 10.2548C8.34256 10.2178 8.38546 10.1883 8.43283 10.1679C8.48021 10.1475 8.53114 10.1366 8.58272 10.1359H10.2273V8.11773C10.2273 5.775 11.6182 4.5 13.6582 4.5H15.33C15.3817 4.50053 15.4328 4.51127 15.4803 4.53158C15.5278 4.5519 15.5709 4.5814 15.607 4.6184C15.6431 4.65539 15.6715 4.69915 15.6907 4.74716C15.7099 4.79517 15.7193 4.84649 15.7186 4.89818V6.65727C15.7193 6.70896 15.7099 6.76028 15.6907 6.8083C15.6715 6.85631 15.6431 6.90007 15.607 6.93706C15.5709 6.97405 15.5278 7.00355 15.4803 7.02387C15.4328 7.04419 15.3817 7.05492 15.33 7.05545H14.3045C13.1959 7.05545 12.9804 7.60091 12.9804 8.38909V10.1359H15.4173C15.4727 10.1366 15.5273 10.149 15.5776 10.1723C15.6279 10.1957 15.6726 10.2294 15.709 10.2712C15.7453 10.3131 15.7723 10.3622 15.7883 10.4152C15.8043 10.4683 15.8089 10.5241 15.8018 10.5791Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4811">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- twitter icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4828)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M19.7731 7.17948C19.1885 7.43484 18.57 7.60448 17.9368 7.68317C18.6043 7.28738 19.1032 6.66035 19.3389 5.92106C18.7142 6.29185 18.0307 6.55299 17.3179 6.69317C16.8811 6.22603 16.3138 5.90115 15.6899 5.76078C15.066 5.6204 14.4142 5.67103 13.8194 5.90608C13.2247 6.14113 12.7144 6.54972 12.355 7.0787C11.9956 7.60768 11.8037 8.23258 11.8042 8.87211C11.802 9.11622 11.8268 9.35982 11.8784 9.59843C10.6105 9.53615 9.36993 9.20709 8.23783 8.63274C7.10572 8.05839 6.10752 7.25167 5.30841 6.26527C4.89766 6.96697 4.77041 7.79905 4.95266 8.59143C5.13491 9.38382 5.6129 10.0767 6.28894 10.5284C5.78434 10.5148 5.29043 10.38 4.84894 10.1353V10.17C4.85036 10.9055 5.10494 11.6181 5.5699 12.188C6.03486 12.7579 6.68184 13.1504 7.40209 13.2995C7.12952 13.3711 6.84864 13.4061 6.56683 13.4037C6.36391 13.4074 6.16118 13.3894 5.96209 13.35C6.16844 13.9826 6.56571 14.5357 7.09926 14.9332C7.6328 15.3307 8.27641 15.5532 8.94157 15.57C7.81439 16.451 6.42484 16.9296 4.9942 16.9295C4.73929 16.9317 4.48452 16.9169 4.23157 16.8853C5.69031 17.8258 7.39066 18.3227 9.1263 18.3158C14.9921 18.3158 18.1989 13.4574 18.1989 9.24632C18.1989 9.1058 18.1989 8.97001 18.1879 8.83422C18.8124 8.38349 19.3496 7.82276 19.7731 7.17948Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4828">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- linked icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4834)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M9.3158 7.63737C9.31611 7.96166 9.22021 8.27875 9.04024 8.54851C8.86027 8.81828 8.60432 9.02859 8.30478 9.15284C8.00524 9.27708 7.67557 9.30967 7.3575 9.24648C7.03942 9.18329 6.74725 9.02716 6.51794 8.79786C6.28863 8.56855 6.13251 8.27637 6.06932 7.9583C6.00613 7.64023 6.03872 7.31056 6.16296 7.01102C6.28721 6.71148 6.49752 6.45552 6.76729 6.27556C7.03705 6.09559 7.35414 5.99969 7.67843 6C8.11256 6.00042 8.52879 6.17306 8.83576 6.48004C9.14274 6.78701 9.31538 7.20324 9.3158 7.63737Z"
+                          fill="white" />
+                        <path
+                          d="M8.54052 9.95844H6.81631C6.5922 9.95844 6.41052 10.1401 6.41052 10.3642V17.5942C6.41052 17.8183 6.5922 18 6.81631 18H8.54052C8.76463 18 8.94631 17.8183 8.94631 17.5942V10.3642C8.94631 10.1401 8.76463 9.95844 8.54052 9.95844Z"
+                          fill="white" />
+                        <path
+                          d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4739 17.8909C15.404 17.821 15.3647 17.7262 15.3647 17.6274V14.2358C15.3647 13.7289 15.5116 12.0253 14.0416 12.0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4408 17.9607 12.348 17.9992 12.2511 18H10.4605C10.4115 18.0002 10.363 17.9907 10.3177 17.9721C10.2724 17.9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4115 9.95842 10.4605 9.95842H12.2511C12.3007 9.95758 12.3501 9.96664 12.3962 9.98507C12.4423 10.0035 12.4843 10.0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4834">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!--  CARD 3 MEAT THE TEAM -->
+              <div class="card  bg-transparent p-5">
+                <figure class="px-10 md:pt-24">
+                  <img src="./images/member3.png" alt="user-1" class="rounded-full w-[100px]" />
+                </figure>
+                <div class="card-body md:w-[200px] items-center text-white">
+                  <h4 class="text-center text-xl">Rokib Hossain</h4>
+                  <p class="text-center text-sm">Fruits Expert</p>
+                  <div class="flex gap-3  ">
+                    <!-- fb icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4811)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M15.8018 10.5791L15.5604 12.6695C15.5504 12.7649 15.5057 12.8533 15.4348 12.9179C15.3639 12.9825 15.2718 13.0189 15.1759 13.02H12.9941L12.9832 19.2177C12.9839 19.2912 12.9557 19.362 12.9047 19.4148C12.8536 19.4676 12.7839 19.4982 12.7104 19.5H10.5C10.4632 19.5 10.4269 19.4926 10.393 19.4782C10.3592 19.4639 10.3287 19.4428 10.3032 19.4163C10.2777 19.3898 10.2578 19.3584 10.2448 19.3241C10.2318 19.2897 10.2258 19.2531 10.2273 19.2164V13.02H8.5909C8.5395 13.0195 8.48871 13.0088 8.44144 12.9887C8.39416 12.9685 8.35132 12.9392 8.31535 12.9025C8.27939 12.8658 8.25101 12.8223 8.23184 12.7746C8.21267 12.7269 8.20308 12.6759 8.20362 12.6245L8.19544 10.5341C8.19472 10.4825 8.20417 10.4313 8.22324 10.3834C8.24231 10.3355 8.27064 10.2918 8.3066 10.2548C8.34256 10.2178 8.38546 10.1883 8.43283 10.1679C8.48021 10.1475 8.53114 10.1366 8.58272 10.1359H10.2273V8.11773C10.2273 5.775 11.6182 4.5 13.6582 4.5H15.33C15.3817 4.50053 15.4328 4.51127 15.4803 4.53158C15.5278 4.5519 15.5709 4.5814 15.607 4.6184C15.6431 4.65539 15.6715 4.69915 15.6907 4.74716C15.7099 4.79517 15.7193 4.84649 15.7186 4.89818V6.65727C15.7193 6.70896 15.7099 6.76028 15.6907 6.8083C15.6715 6.85631 15.6431 6.90007 15.607 6.93706C15.5709 6.97405 15.5278 7.00355 15.4803 7.02387C15.4328 7.04419 15.3817 7.05492 15.33 7.05545H14.3045C13.1959 7.05545 12.9804 7.60091 12.9804 8.38909V10.1359H15.4173C15.4727 10.1366 15.5273 10.149 15.5776 10.1723C15.6279 10.1957 15.6726 10.2294 15.709 10.2712C15.7453 10.3131 15.7723 10.3622 15.7883 10.4152C15.8043 10.4683 15.8089 10.5241 15.8018 10.5791Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4811">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- twitter icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4828)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M19.7731 7.17948C19.1885 7.43484 18.57 7.60448 17.9368 7.68317C18.6043 7.28738 19.1032 6.66035 19.3389 5.92106C18.7142 6.29185 18.0307 6.55299 17.3179 6.69317C16.8811 6.22603 16.3138 5.90115 15.6899 5.76078C15.066 5.6204 14.4142 5.67103 13.8194 5.90608C13.2247 6.14113 12.7144 6.54972 12.355 7.0787C11.9956 7.60768 11.8037 8.23258 11.8042 8.87211C11.802 9.11622 11.8268 9.35982 11.8784 9.59843C10.6105 9.53615 9.36993 9.20709 8.23783 8.63274C7.10572 8.05839 6.10752 7.25167 5.30841 6.26527C4.89766 6.96697 4.77041 7.79905 4.95266 8.59143C5.13491 9.38382 5.6129 10.0767 6.28894 10.5284C5.78434 10.5148 5.29043 10.38 4.84894 10.1353V10.17C4.85036 10.9055 5.10494 11.6181 5.5699 12.188C6.03486 12.7579 6.68184 13.1504 7.40209 13.2995C7.12952 13.3711 6.84864 13.4061 6.56683 13.4037C6.36391 13.4074 6.16118 13.3894 5.96209 13.35C6.16844 13.9826 6.56571 14.5357 7.09926 14.9332C7.6328 15.3307 8.27641 15.5532 8.94157 15.57C7.81439 16.451 6.42484 16.9296 4.9942 16.9295C4.73929 16.9317 4.48452 16.9169 4.23157 16.8853C5.69031 17.8258 7.39066 18.3227 9.1263 18.3158C14.9921 18.3158 18.1989 13.4574 18.1989 9.24632C18.1989 9.1058 18.1989 8.97001 18.1879 8.83422C18.8124 8.38349 19.3496 7.82276 19.7731 7.17948Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4828">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- linked icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4834)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M9.3158 7.63737C9.31611 7.96166 9.22021 8.27875 9.04024 8.54851C8.86027 8.81828 8.60432 9.02859 8.30478 9.15284C8.00524 9.27708 7.67557 9.30967 7.3575 9.24648C7.03942 9.18329 6.74725 9.02716 6.51794 8.79786C6.28863 8.56855 6.13251 8.27637 6.06932 7.9583C6.00613 7.64023 6.03872 7.31056 6.16296 7.01102C6.28721 6.71148 6.49752 6.45552 6.76729 6.27556C7.03705 6.09559 7.35414 5.99969 7.67843 6C8.11256 6.00042 8.52879 6.17306 8.83576 6.48004C9.14274 6.78701 9.31538 7.20324 9.3158 7.63737Z"
+                          fill="white" />
+                        <path
+                          d="M8.54052 9.95844H6.81631C6.5922 9.95844 6.41052 10.1401 6.41052 10.3642V17.5942C6.41052 17.8183 6.5922 18 6.81631 18H8.54052C8.76463 18 8.94631 17.8183 8.94631 17.5942V10.3642C8.94631 10.1401 8.76463 9.95844 8.54052 9.95844Z"
+                          fill="white" />
+                        <path
+                          d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4739 17.8909C15.404 17.821 15.3647 17.7262 15.3647 17.6274V14.2358C15.3647 13.7289 15.5116 12.0253 14.0416 12.0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4408 17.9607 12.348 17.9992 12.2511 18H10.4605C10.4115 18.0002 10.363 17.9907 10.3177 17.9721C10.2724 17.9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4115 9.95842 10.4605 9.95842H12.2511C12.3007 9.95758 12.3501 9.96664 12.3962 9.98507C12.4423 10.0035 12.4843 10.0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4834">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!--  CARD 4 MEAT THE TEAM -->
+              <div class="card  bg-transparent p-5">
+                <figure class="px-10 md:pt-24">
+                  <img src="./images/member4.png" alt="user-1" class="rounded-full w-[100px]" />
+                </figure>
+                <div class="card-body md:w-[200px]  items-center text-white">
+                  <h4 class="text-center text-xl">Chaity</h4>
+                  <p class="text-center text-sm">Fruits Expert</p>
+                  <div class="flex gap-3  ">
+                    <!-- fb icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4811)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M15.8018 10.5791L15.5604 12.6695C15.5504 12.7649 15.5057 12.8533 15.4348 12.9179C15.3639 12.9825 15.2718 13.0189 15.1759 13.02H12.9941L12.9832 19.2177C12.9839 19.2912 12.9557 19.362 12.9047 19.4148C12.8536 19.4676 12.7839 19.4982 12.7104 19.5H10.5C10.4632 19.5 10.4269 19.4926 10.393 19.4782C10.3592 19.4639 10.3287 19.4428 10.3032 19.4163C10.2777 19.3898 10.2578 19.3584 10.2448 19.3241C10.2318 19.2897 10.2258 19.2531 10.2273 19.2164V13.02H8.5909C8.5395 13.0195 8.48871 13.0088 8.44144 12.9887C8.39416 12.9685 8.35132 12.9392 8.31535 12.9025C8.27939 12.8658 8.25101 12.8223 8.23184 12.7746C8.21267 12.7269 8.20308 12.6759 8.20362 12.6245L8.19544 10.5341C8.19472 10.4825 8.20417 10.4313 8.22324 10.3834C8.24231 10.3355 8.27064 10.2918 8.3066 10.2548C8.34256 10.2178 8.38546 10.1883 8.43283 10.1679C8.48021 10.1475 8.53114 10.1366 8.58272 10.1359H10.2273V8.11773C10.2273 5.775 11.6182 4.5 13.6582 4.5H15.33C15.3817 4.50053 15.4328 4.51127 15.4803 4.53158C15.5278 4.5519 15.5709 4.5814 15.607 4.6184C15.6431 4.65539 15.6715 4.69915 15.6907 4.74716C15.7099 4.79517 15.7193 4.84649 15.7186 4.89818V6.65727C15.7193 6.70896 15.7099 6.76028 15.6907 6.8083C15.6715 6.85631 15.6431 6.90007 15.607 6.93706C15.5709 6.97405 15.5278 7.00355 15.4803 7.02387C15.4328 7.04419 15.3817 7.05492 15.33 7.05545H14.3045C13.1959 7.05545 12.9804 7.60091 12.9804 8.38909V10.1359H15.4173C15.4727 10.1366 15.5273 10.149 15.5776 10.1723C15.6279 10.1957 15.6726 10.2294 15.709 10.2712C15.7453 10.3131 15.7723 10.3622 15.7883 10.4152C15.8043 10.4683 15.8089 10.5241 15.8018 10.5791Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4811">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- twitter icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4828)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M19.7731 7.17948C19.1885 7.43484 18.57 7.60448 17.9368 7.68317C18.6043 7.28738 19.1032 6.66035 19.3389 5.92106C18.7142 6.29185 18.0307 6.55299 17.3179 6.69317C16.8811 6.22603 16.3138 5.90115 15.6899 5.76078C15.066 5.6204 14.4142 5.67103 13.8194 5.90608C13.2247 6.14113 12.7144 6.54972 12.355 7.0787C11.9956 7.60768 11.8037 8.23258 11.8042 8.87211C11.802 9.11622 11.8268 9.35982 11.8784 9.59843C10.6105 9.53615 9.36993 9.20709 8.23783 8.63274C7.10572 8.05839 6.10752 7.25167 5.30841 6.26527C4.89766 6.96697 4.77041 7.79905 4.95266 8.59143C5.13491 9.38382 5.6129 10.0767 6.28894 10.5284C5.78434 10.5148 5.29043 10.38 4.84894 10.1353V10.17C4.85036 10.9055 5.10494 11.6181 5.5699 12.188C6.03486 12.7579 6.68184 13.1504 7.40209 13.2995C7.12952 13.3711 6.84864 13.4061 6.56683 13.4037C6.36391 13.4074 6.16118 13.3894 5.96209 13.35C6.16844 13.9826 6.56571 14.5357 7.09926 14.9332C7.6328 15.3307 8.27641 15.5532 8.94157 15.57C7.81439 16.451 6.42484 16.9296 4.9942 16.9295C4.73929 16.9317 4.48452 16.9169 4.23157 16.8853C5.69031 17.8258 7.39066 18.3227 9.1263 18.3158C14.9921 18.3158 18.1989 13.4574 18.1989 9.24632C18.1989 9.1058 18.1989 8.97001 18.1879 8.83422C18.8124 8.38349 19.3496 7.82276 19.7731 7.17948Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4828">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <!-- linked icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_11_4834)">
+                        <path
+                          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                          fill="#F85559" />
+                        <path
+                          d="M9.3158 7.63737C9.31611 7.96166 9.22021 8.27875 9.04024 8.54851C8.86027 8.81828 8.60432 9.02859 8.30478 9.15284C8.00524 9.27708 7.67557 9.30967 7.3575 9.24648C7.03942 9.18329 6.74725 9.02716 6.51794 8.79786C6.28863 8.56855 6.13251 8.27637 6.06932 7.9583C6.00613 7.64023 6.03872 7.31056 6.16296 7.01102C6.28721 6.71148 6.49752 6.45552 6.76729 6.27556C7.03705 6.09559 7.35414 5.99969 7.67843 6C8.11256 6.00042 8.52879 6.17306 8.83576 6.48004C9.14274 6.78701 9.31538 7.20324 9.3158 7.63737Z"
+                          fill="white" />
+                        <path
+                          d="M8.54052 9.95844H6.81631C6.5922 9.95844 6.41052 10.1401 6.41052 10.3642V17.5942C6.41052 17.8183 6.5922 18 6.81631 18H8.54052C8.76463 18 8.94631 17.8183 8.94631 17.5942V10.3642C8.94631 10.1401 8.76463 9.95844 8.54052 9.95844Z"
+                          fill="white" />
+                        <path
+                          d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4739 17.8909C15.404 17.821 15.3647 17.7262 15.3647 17.6274V14.2358C15.3647 13.7289 15.5116 12.0253 14.0416 12.0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4408 17.9607 12.348 17.9992 12.2511 18H10.4605C10.4115 18.0002 10.363 17.9907 10.3177 17.9721C10.2724 17.9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4115 9.95842 10.4605 9.95842H12.2511C12.3007 9.95758 12.3501 9.96664 12.3962 9.98507C12.4423 10.0035 12.4843 10.0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_11_4834">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION  -->
+    <section>
+      <!-- why choose header  -->
+      <div class="flex flex-col text-center mb-10">
+        <h1 class="text-3xl font-extrabold">Why Choose Us</h1>
+        <p class="text-base w-2/4 mx-auto mt-3">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+      </div>
+      <!-- why choose main content  -->
+      <div class="flex">
+        <!-- left  -->
+        <div class="flex gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20.52 9.16036C21.2025 8.49188 21.6 7.5787 21.6 6.6C21.6 4.61503 19.9852 3 18 3C17.3441 3 16.6988 3.18028 16.1332 3.52148C15.9442 3.63577 15.8832 3.88144 15.9973 4.07072C16.1113 4.26 16.3574 4.32033 16.5465 4.20666C16.9875 3.94064 17.4899 3.80002 18 3.80002C19.5437 3.80002 20.8 5.05608 20.8 6.6C20.8 7.55077 20.3238 8.42714 19.5246 8.94548C18.8535 9.38573 18.0027 9.51267 17.2258 9.29138C17.0156 9.23081 16.7922 9.35348 16.7312 9.56597C16.6707 9.77845 16.7937 9.99975 17.0062 10.0605C17.3297 10.1531 17.664 10.2 18 10.2C18.629 10.2 19.2369 10.0284 19.7767 9.71855C21.8301 10.4626 23.2 12.4013 23.2 14.6V16.6H19.5525C19.2692 13.9283 17.5884 11.5904 15.1367 10.4802C15.9169 9.68587 16.4 8.59875 16.4 7.40002C16.4 4.97381 14.4262 3 12 3C9.57384 3 7.59998 4.97381 7.59998 7.40002C7.59998 8.59913 8.08336 9.68658 8.86397 10.481C8.03887 10.8559 7.27364 11.3803 6.62461 12.0256C5.38041 13.2734 4.62328 14.8749 4.44356 16.6001H0.800016V14.6001C0.800016 13.2149 1.34105 11.9089 2.32191 10.9239C2.86186 10.3874 3.51923 9.97805 4.22705 9.7208C4.76691 10.0294 5.37305 10.2 6 10.2C6.33595 10.2 6.67031 10.1531 6.99375 10.0605C7.20623 9.9998 7.32928 9.7785 7.26876 9.56602C7.20783 9.35353 6.98437 9.23105 6.77423 9.29142C5.99766 9.51309 5.1473 9.38634 4.47347 8.94455C3.67622 8.42714 3.20002 7.55081 3.20002 6.6C3.20002 5.05608 4.45627 3.80002 6 3.80002C6.51014 3.80002 7.0125 3.94064 7.4535 4.20666C7.64334 4.32033 7.88827 4.25939 8.00273 4.07072C8.11678 3.88148 8.05584 3.63577 7.8668 3.52148C7.30116 3.18028 6.65587 3 6 3C4.01484 3 2.4 4.61503 2.4 6.6C2.4 7.57795 2.7968 8.49042 3.47737 9.1583C2.84302 9.45319 2.25712 9.8603 1.75627 10.3578C0.623812 11.4953 0 13.0018 0 14.6V17C0 17.2209 0.178922 17.4 0.399984 17.4H4.39997V20.6C4.39997 20.8209 4.57889 21 4.79995 21H19.2C19.4211 21 19.5999 20.8209 19.5999 20.6V17.4H23.5999C23.821 17.4 23.9999 17.2209 23.9999 17V14.6C24 12.2349 22.6255 10.131 20.52 9.16036ZM8.4 7.40002C8.4 5.41505 10.0148 3.80002 12 3.80002C13.9852 3.80002 15.6 5.41505 15.6 7.40002C15.6 9.38498 13.9852 11 12 11C10.0148 11 8.4 9.38494 8.4 7.40002ZM18.8 20.2H5.19998V17.4C5.19998 15.5863 5.907 13.8783 7.18983 12.5916C7.86562 11.9194 8.68491 11.398 9.5633 11.0607C10.2615 11.527 11.0992 11.8 12 11.8C12.9022 11.8 13.7415 11.5262 14.4403 11.0585C17.0549 12.0631 18.8 14.5838 18.8 17.4V20.2Z" fill="#121212"/>
+          </svg>
+          <div>
+            <h3>Dedicated Team</h3>
+          <hr>
+          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+          </div>
+        </div>
+        <!-- center  -->
+        <div>
+
+        </div>
+        <!-- right  -->
+        <div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+
+</html>
