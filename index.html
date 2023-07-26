@@ -31,7 +31,7 @@
 </head>
 
 <body class="lato">
-  <header class="md:max-w-screen-xl mx-auto px-8 md:px-16 lg:px-20 py-3">
+  <header class="md:max-w-screen-xl mx-auto px-8 md:px-16 lg:px-20 py-1">
     <nav class="navbar md:bg-primary-color h-[80px] rounded-full mt-5 flex-row-reverse md:flex-row">
       <div class="navbar-start">
         <div class="dropdown">
@@ -76,14 +76,71 @@
 
   <main class="md:max-w-screen-xl mx-auto px-8 md:px-16 lg:px-20">
     <!-- banner section  -->
-    <section class="mt-10 relative">
-      <div class="hero min-h-[500px] bg-cover bg-no-repeat" style="background-image: url('./images/banner4.png');">
-        <div class=" hero-overlay  bg-opacity-50"></div>
-        <div class="hero-content text-center text-neutral-content">
-          <div class="max-w-md space-y-4 -mt-36">
-            <h1 class="mb-5 text-6xl font-bold">Exotic tastes at your doorstep</h1>
-            <p class="text-lg">We supply highly quality organic products</p>
-            <button class="btn bg-primary-color border-none text-white">Shop Now</button>
+    <section class="mt-5 relative">
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full" >
+          <!-- <img src="./images/banner4.png" class="w-full" /> -->
+          <div class="hero min-h-[calc(100vh-132px)]  bg-cover bg-no-repeat" style="background-image: url('./images/banner4.png');">
+            <div class=" hero-overlay  bg-opacity-50"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md space-y-4 -mt-36">
+                <h1 class="mb-5 text-6xl font-bold">Exotic tastes at your doorstep</h1>
+                <p class="text-lg">We supply highly quality organic products</p>
+                <button class="btn bg-primary-color border-none text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a> 
+            <a href="#slide2" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class="hero min-h-[calc(100vh-132px)]  bg-cover bg-no-repeat" style="background-image: url('./images/banner3.png');">
+            <div class=" hero-overlay  bg-opacity-50"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md space-y-4 -mt-36">
+                <h1 class="mb-5 text-6xl font-bold">Exotic tastes at your doorstep</h1>
+                <p class="text-lg">We supply highly quality organic products</p>
+                <button class="btn bg-primary-color border-none text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a> 
+            <a href="#slide3" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <div class="hero min-h-[calc(100vh-132px)] bg-cover bg-no-repeat" style="background-image: url('./images/banner2.png');">
+            <div class=" hero-overlay  bg-opacity-50"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md space-y-4 -mt-36">
+                <h1 class="mb-5 text-6xl font-bold">Exotic tastes at your doorstep</h1>
+                <p class="text-lg">We supply highly quality organic products</p>
+                <button class="btn bg-primary-color border-none text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a> 
+            <a href="#slide4" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full">
+          <div class="hero min-h-[calc(100vh-132px)] bg-cover bg-no-repeat" style="background-image: url('./images/banner1.png');">
+            <div class=" hero-overlay  bg-opacity-50"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md space-y-4 -mt-36">
+                <h1 class="mb-5 text-6xl font-bold">Exotic tastes at your doorstep</h1>
+                <p class="text-lg">We supply highly quality organic products</p>
+                <button class="btn bg-primary-color border-none text-white">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a> 
+            <a href="#slide1" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
           </div>
         </div>
       </div>
