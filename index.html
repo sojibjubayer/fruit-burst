@@ -23,6 +23,7 @@
         extend: {
           colors: {
             'primary-color': '#F85559',
+            'pColor': '#717171',
             'rating': '#F85559',
           }
         }
@@ -109,7 +110,8 @@
             <div class=" hero-overlay  bg-opacity-50 rounded-lg"></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="space-y-4 ">
-                <h1 class="md:mt-2 md:text-6xl text-3xl font-extrabold text-center ">Exotic tastes at your <br> doorstep
+                <h1 class="md:mt-2 md:text-6xl text-3xl font-extrabold text-center "> Sweet, juicy, and packed <br> with
+                  goodness
                 </h1>
                 <p class="md:text-lg text-sm pt-10">We supply high quality organic products</p>
                 <button
@@ -129,7 +131,7 @@
             <div class=" hero-overlay  bg-opacity-50 rounded-lg"></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="space-y-4 ">
-                <h1 class="md:mt-2 md:text-6xl text-3xl font-extrabold text-center ">Exotic tastes at your <br> doorstep
+                <h1 class="md:mt-2 md:text-6xl text-3xl font-extrabold text-center ">Enjoy eating delicious fruits
                 </h1>
                 <p class="md:text-lg text-sm pt-10">We supply high quality organic products</p>
                 <button
@@ -149,7 +151,7 @@
             <div class=" hero-overlay  bg-opacity-50 rounded-lg"></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="space-y-4 ">
-                <h1 class="md:mt-2 md:text-6xl text-3xl font-extrabold text-center ">Exotic tastes at your <br> doorstep
+                <h1 class="md:mt-2 md:text-6xl text-3xl font-extrabold text-center ">Taste the goodness of nature
                 </h1>
                 <p class="md:text-lg text-sm pt-10">We supply high quality organic products</p>
                 <button
@@ -170,19 +172,19 @@
           class="flex justify-around text-center items-center w-4/5 h-[200px] bg-[#fff] rounded-lg   absolute -mt-24">
           <div>
             <img src="./images/fruit1.png" alt="">
-            <p>Strawberry</p>
+            <p class="text-base text-pColor">Grapes</p>
           </div>
           <div>
             <img src="./images/fruit2.png" alt="">
-            <p>Orange</p>
+            <p class="text-base text-pColor">Orange</p>
           </div>
           <div>
             <img src="./images/fruit3.png" alt="">
-            <p>Mango</p>
+            <p class="text-base text-pColor">Mango</p>
           </div>
           <div>
             <img src="./images/fruit4.png" alt="">
-            <p>Strawberry</p>
+            <p class="text-base text-pColor">Strawberry</p>
           </div>
           <div>
             <img src="./images/fruit5.png" alt="">
@@ -192,12 +194,12 @@
       </div>
     </section>
 
-    <!-- DEAL  SECTION START -->
+    <!-- DEAL OF THE DAY HEADING SECTION  -->
     <section class="mb-5">
       <div class="flex flex-col lg:flex-row">
         <div class="lg:flex-1 text-center lg:text-left ">
-          <h1 class="md:text-5xl text-3xl font-extrabold   mt-4 md:mt-0">Deal of the day</h1>
-          <p class="text-sm md:text-base lg:w-[550px]  ">Contrary to popular belief, is not
+          <h1 class="md:text-5xl text-3xl font-extrabold mt-4 lg:mt-0">Deal of the day</h1>
+          <p class="text-sm md:text-base lg:w-[550px] text-pColor mt-3">Contrary to popular belief, is not
             simply random text. It has roots in a
             piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
         </div>
@@ -206,7 +208,7 @@
             <span class="countdown font-mono text-3xl font-extrabold md:text-5xl">
               <span style="--value:29;"></span>
             </span>
-            days
+            <p class="text-base text-pColor">days</p>
           </div>
           <div>
             <i class="fa-solid fa-ellipsis-vertical text-xl md:text-2xl md:mt-2"></i>
@@ -215,7 +217,7 @@
             <span class="countdown font-mono text-3xl font-extrabold md:text-5xl">
               <span style="--value:15;"></span>
             </span>
-            hours
+            <p class="text-base text-pColor">hours</p>
           </div>
           <div>
             <i class="fa-solid fa-ellipsis-vertical text-xl md:text-2xl md:mt-2"></i>
@@ -224,7 +226,8 @@
             <span class="countdown font-mono text-3xl font-extrabold md:text-5xl">
               <span style="--value:25;"></span>
             </span>
-            min
+            <p class="text-base text-pColor">min</p>
+
           </div>
           <div>
             <i class="fa-solid fa-ellipsis-vertical text-xl md:text-2xl md:mt-2"></i>
@@ -233,23 +236,22 @@
             <span class="countdown font-mono text-3xl font-extrabold md:text-5xl">
               <span style="--value:08;"></span>
             </span>
-            sec
+            <p class="text-base text-pColor">sec</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- DEAL RATING SECTION  -->
-    <section class="mb-10 md:mb-28">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  justify-between">
+      <!-- DEAL OF THE DAY RATING SECTION  -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  justify-between mb-5">
         <!-- CARD -1  -->
         <div class="card  bg-white ">
           <figure class="px-10 pt-10">
-            <img src="./images/fruit6.png" alt="user-1" class="rounded-xl" />
+            <img src="./images/fruit6.png" alt="user-1" class="rounded-xl w-40 h-40" />
           </figure>
           <div class="card-body  items-center">
-            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
-            <p class="text-center text-sm">Apples</p>
+            <h4 class="text-center text-xl">12.90$ - 18.85$</h4>
+            <hr class="w-36 border-1 border-stone-300">
+            <p class="text-center text-base text-pColor">Apples</p>
             <div class="rating rating-sm rating-half">
               <input type="radio" name="rating-10-1" class="rating-hidden" />
               <input type="radio" name="rating-10-1" class="bg-rating mask mask-star-2 mask-half-1" />
@@ -306,11 +308,12 @@
         <!-- CARD 2  -->
         <div class="card  bg-white ">
           <figure class="px-10 pt-10">
-            <img src="./images/fruit7.png" alt="fruit-7" class="rounded-xl" />
+            <img src="./images/fruit7.png" alt="fruit-7" class="rounded-xl w-40 h-40" />
           </figure>
           <div class="card-body  items-center">
-            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
-            <p class="text-center text-sm">Orange</p>
+            <h4 class="text-center text-xl">12.90$ - 18.85$</h4>
+            <hr class="w-36 border-1 border-stone-300">
+            <p class="text-center text-base text-pColor">Orange</p>
             <div class="rating rating-sm rating-half">
               <input type="radio" name="rating-10-2" class="rating-hidden" />
               <input type="radio" name="rating-10-2" class="bg-rating mask mask-star-2 mask-half-1" />
@@ -367,11 +370,12 @@
         <!-- CARD 3  -->
         <div class="card  bg-white ">
           <figure class="px-10 pt-10">
-            <img src="./images/fruit8.png" alt="fruit8" class="rounded-xl" />
+            <img src="./images/fruit8.png" alt="fruit8" class="rounded-xl w-40 h-40" />
           </figure>
           <div class="card-body  items-center">
-            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
-            <p class="text-center text-sm">Red Dragon</p>
+            <h4 class="text-center text-xl">12.90$ - 18.85$</h4>
+            <hr class="w-36 border-1 border-stone-300">
+            <p class="text-center text-base text-pColor">Red Dragon</p>
             <div class="rating rating-sm rating-half">
               <input type="radio" name="rating-10-3" class="rating-hidden" />
               <input type="radio" name="rating-10-3" class="bg-rating mask mask-star-2 mask-half-1" />
@@ -428,11 +432,12 @@
         <!-- CARD-4  -->
         <div class="card  bg-white">
           <figure class="px-10 pt-10">
-            <img src="./images/fruit9.png" alt="fruit9" class="rounded-xl" />
+            <img src="./images/fruit9.png" alt="fruit9" class="rounded-xl w-40 h-40" />
           </figure>
           <div class="card-body  items-center">
-            <h4 class="text-center text-xl border-b-2">12.90$ - 18.85$</h4>
-            <p class="text-center text-sm">Banana</p>
+            <h4 class="text-center text-xl">12.90$ - 18.85$</h4>
+            <hr class="w-36 border-1 border-stone-300">
+            <p class="text-center text-base text-pColor">Banana</p>
             <div class="rating rating-sm rating-half">
               <input type="radio" name="rating-10-4" class="rating-hidden" />
               <input type="radio" name="rating-10-4" class="bg-rating mask mask-star-2 mask-half-1" />
@@ -492,14 +497,14 @@
     </section>
 
     <!-- MEET THE TEAM SECTION  -->
-    <section class="mb-10">
+    <section class="mt-12 mb-10">
       <div class="hero min-h-[500px] bg-cover bg-no-repeat" style="background-image: url('./images/banner1.png');">
         <div class=" hero-overlay  bg-opacity-70 "></div>
         <div class="hero-content text-center text-neutral-content">
           <div class="space-y-4">
-            <div class="md:w-[500px] mx-auto">
+            <div class="md:w-[550px] mx-auto">
               <h1 class="text-2xl md:text-4xl font-extrabold mt-10">Meet the team section</h1>
-              <p class="text-sm mt-3">Contrary to popular belief, is not simply random text.It has roots in a
+              <p class="text-base mt-3">Contrary to popular belief, is not simply random text.It has roots in a
                 piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
 
@@ -508,7 +513,7 @@
               <!--  CARD 1 MEAT THE TEAM -->
               <div class="card  bg-transparent">
                 <figure class="px-10 pt-10">
-                  <img src="./images/member3.png" alt="user-1" class="rounded-xl" />
+                  <img src="./images/member1.png" alt="member-1" class="rounded-xl lg:w-24" />
                 </figure>
                 <div class="card-body  items-center">
                   <h4 class="text-center text-xl ">Awlad Hossain</h4>
@@ -528,10 +533,10 @@
               <!--  CARD 2 MEAT THE TEAM -->
               <div class="card  bg-transparent">
                 <figure class="px-10 pt-10">
-                  <img src="./images/member2.png" alt="user-1" class="rounded-xl" />
+                  <img src="./images/member2.png" alt="member-2" class="rounded-xl lg:w-24" />
                 </figure>
                 <div class="card-body  items-center">
-                  <h4 class="text-center text-xl ">Awlad Hossain</h4>
+                  <h4 class="text-center text-xl ">Safia Chowdhury</h4>
                   <p class="text-center text-sm">Fruits Expert</p>
                   <!-- ICON  -->
                   <div class="flex gap-3  ">
@@ -548,10 +553,10 @@
               <!--  CARD 3 MEAT THE TEAM -->
               <div class="card  bg-transparent">
                 <figure class="px-10 pt-10">
-                  <img src="./images/member3.png" alt="user-1" class="rounded-xl" />
+                  <img src="./images/member3.png" alt="member-3" class="rounded-xl lg:w-24" />
                 </figure>
                 <div class="card-body  items-center">
-                  <h4 class="text-center text-xl ">Awlad Hossain</h4>
+                  <h4 class="text-center text-xl ">Rakib Hossain</h4>
                   <p class="text-center text-sm">Fruits Expert</p>
                   <!-- ICON  -->
                   <div class="flex gap-3  ">
@@ -568,10 +573,10 @@
               <!--  CARD 4 MEAT THE TEAM -->
               <div class="card  bg-transparent">
                 <figure class="px-10 pt-10">
-                  <img src="./images/member4.png" alt="user-1" class="rounded-xl" />
+                  <img src="./images/member4.png" alt="member-4" class="rounded-xl lg:w-24" />
                 </figure>
                 <div class="card-body  items-center">
-                  <h4 class="text-center text-xl ">Awlad Hossain</h4>
+                  <h4 class="text-center text-xl ">Chaity</h4>
                   <p class="text-center text-sm">Fruits Expert</p>
                   <!-- ICON  -->
                   <div class="flex gap-3  ">
@@ -598,7 +603,7 @@
       <!-- why choose us header  -->
       <div class="flex flex-col text-center mb-5">
         <h1 class="text-3xl font-extrabold">Why Choose Us</h1>
-        <p class="text-sm md:text-base md:w-2/4 mx-auto mt-3">Contrary to popular belief, is not simply random text. It
+        <p class="text-base md:w-2/4 mx-auto mt-3 text-pColor">Contrary to popular belief, is not simply random text. It
           has roots in a
           piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
       </div>
@@ -620,7 +625,8 @@
               <div class="flex justify-center lg:justify-start">
                 <hr class="w-24 border border-stone-400">
               </div>
-              <p class="text-base lg:w-80">Professional employees are there for you to pick the most amazing and fresh
+              <p class="text-base lg:w-80 text-pColor">Professional employees are there for you to pick the most amazing
+                and fresh
                 fruits.
               </p>
             </div>
@@ -634,7 +640,8 @@
               <div class="flex justify-center lg:justify-start">
                 <hr class="w-24 border border-stone-400">
               </div>
-              <p class="text-base lg:w-80">Professional employees are there for you to pick the most amazing and fresh
+              <p class="text-base lg:w-80 text-pColor">Professional employees are there for you to pick the most amazing
+                and fresh
                 fruits.
               </p>
             </div>
@@ -648,7 +655,8 @@
               <div class="flex justify-center lg:justify-start">
                 <hr class="w-24 border border-stone-400">
               </div>
-              <p class="text-base lg:w-80">Professional employees are there for you to pick the most amazing and fresh
+              <p class="text-base lg:w-80 text-pColor">Professional employees are there for you to pick the most amazing
+                and fresh
                 fruits.
               </p>
             </div>
@@ -670,7 +678,8 @@
                 <div class="flex justify-center lg:justify-end">
                   <hr class="w-24 border border-stone-400">
                 </div>
-                <p class="text-base lg:w-80">Professional employees are there for you to pick the most amazing and fresh
+                <p class="text-base lg:w-80 text-pColor">Professional employees are there for you to pick the most
+                  amazing and fresh
                   fruits.
                 </p>
               </div>
@@ -684,7 +693,8 @@
                 <div class="flex justify-center lg:justify-end">
                   <hr class="w-24 border border-stone-400">
                 </div>
-                <p class="text-base lg:w-80">Professional employees are there for you to pick the most amazing and fresh
+                <p class="text-base lg:w-80 text-pColor">Professional employees are there for you to pick the most
+                  amazing and fresh
                   fruits.
                 </p>
               </div>
@@ -698,7 +708,8 @@
                 <div class="flex justify-center lg:justify-end">
                   <hr class="w-24 border border-stone-400">
                 </div>
-                <p class="text-base lg:w-80">Professional employees are there for you to pick the most amazing and fresh
+                <p class="text-base lg:w-80 text-pColor">Professional employees are there for you to pick the most
+                  amazing and fresh
                   fruits.
                 </p>
               </div>
@@ -710,7 +721,7 @@
       </div>
     </section>
   </main>
-
+  <!-- FOOTER SECTION  -->
   <footer class="footer footer-center p-10 bg-slate-950 text-primary-content">
     <div class="flex">
       <img src="./images/logo.png" alt="">
